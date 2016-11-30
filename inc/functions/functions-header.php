@@ -44,7 +44,7 @@ if(!empty($option['mobile_header_type'])) {
 			<div class="nav-search pointer"></div>
 			<div class="nav-search-input">
 				<form method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
-					<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'magazineplus' ); ?>"  name="s" >
+					<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'tophot' ); ?>"  name="s" >
 				</form>
 			</div>
 		</div>
@@ -227,7 +227,7 @@ function tophot_logo_mobile() {
 		</a>
 	<?php }
 }
-add_filter('magazineplus_logo_mobile','magazineplus_logo_mobile');
+add_filter('tophot_logo_mobile','tophot_logo_mobile');
 
 function tophot_nav() {
 	if(class_exists('md_walker')) {

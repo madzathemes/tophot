@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.2.4
+  	Version: 1.2.5
     Theme Name: topHot
     Theme URI: http://tophot.wpengine.com/
     Description: Magazin / Blog
@@ -1628,6 +1628,19 @@ h2.heading::before {
   background-position: center;
   background-size: cover;
 }
+.mt-post-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
 .dropdown-menu .mt-post-image {
     height: 160px;
 }
@@ -1831,6 +1844,9 @@ h2.heading::before {
 }
 .poster.normal .poster-content {
   padding-top: 30px;
+}
+.poster.normal.img-empty .poster-content {
+  padding-top:0px;
 }
 .poster:hover h2,
 .poster-small:hover h4{
@@ -2962,6 +2978,9 @@ background-color: rgba(0,0,0,.6);
   position: static;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.boxed-layout-on .mt-content-container .row .col-md-12 > div {
+  overflow: hidden;
 }
 .page .mt-content-container {
   padding-top: 0px;

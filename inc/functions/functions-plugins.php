@@ -43,7 +43,7 @@ function tophot_register_required_plugins() {
               'force_activation'		=> false,
         ),
         array(
-        			'name'     				=> esc_html__( "One Click Demo Import","boomnews" ), // The plugin name
+        			'name'     				=> esc_html__( "One Click Demo Import","tophot" ), // The plugin name
         			'slug'     				=> 'one-click-demo-import', // The plugin slug (typically the folder name)
         			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
               'force_activation'		=> false,

@@ -25,7 +25,7 @@ function tophot_customize_colors($wp_customize){
   Kirki::add_field( 'tophot_theme_options[background_color]', array(
     'type'        => 'color',
     'settings'    => 'tophot_theme_options[background_color]',
-    'label'       => esc_html__( 'Background Color', 'background_color' ),
+    'label'       => esc_html__( 'Background Color', 'tophot' ),
     'section'     => 'background_settings',
     'default'     => '',
     'option_type' => 'option',
