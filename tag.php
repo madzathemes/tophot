@@ -1,5 +1,6 @@
 <?php get_header();
 
+$tag_title = single_tag_title("", false);
 $tag_obj = get_query_var('tag_id');
 $tag_array = get_tag($tag_obj);
 $tag_slug = $tag_array->slug;
@@ -12,7 +13,7 @@ $tag_slug = $tag_array->slug;
 
 				<?php if ( have_posts() ) : ?>
 
-					<?php echo do_shortcode('[posts pagination=on title="'. esc_html__( 'Tag','tophot' ) .': '.esc_attr($tag_slug).'" title_type="left" tag="'.esc_attr($tag_slug).'" type=normal-right]');?>
+					<?php echo do_shortcode('[posts pagination=on title="'. esc_html__( 'Tag','tophot' ) .': '.esc_attr($tag_title).'" title_type="left" tag="'.esc_attr($tag_slug).'" type=normal-right]');?>
 
 				<?php else : ?>
 
@@ -29,12 +30,9 @@ $tag_slug = $tag_array->slug;
 
 				<?php endif; ?>
 
-
 		</div>
 
-
 			<div class="col-md-4 sidebar"><?php get_sidebar(); ?></div>
-
 
 	</div>
 </div>
