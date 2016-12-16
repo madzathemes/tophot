@@ -1,8 +1,7 @@
 <?php
 function tophot_header_script() {
 
-		wp_enqueue_style('tophot-', get_stylesheet_uri());
-		wp_enqueue_script('tophot-effects', get_template_directory_uri() . '/inc/js/effects.js', array('jquery'), '1.0', true);
+		wp_enqueue_style('tophot', get_stylesheet_uri());
 
 		$option = get_option("tophot_theme_options");
 		if  (!empty($option['menu_top_ad'])) {
