@@ -129,6 +129,9 @@
 .icon_search > ul {
 	margin: 0;
 }
+.ocdi .notice.notice-info {
+  display: none!important;
+}
 [class^="icon_set-"], [class*=" icon_set-"] {
 	max-width: 50%;
 	width: 48%;
