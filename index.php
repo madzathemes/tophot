@@ -12,8 +12,9 @@ if ($mt_layout == "left") {
 }
 
 ?>
+<div class="mt-container-wrap">
 
-<div class="container mt-content-container">
+<div class="container mt-content-container ">
 <div class="row">
 	<div class="col-md-<?php if ($mt_layout != "full") { echo sanitize_html_class("8 "); } else {  echo sanitize_html_class("12 "); } echo sanitize_html_class($mt_float_layout); ?> ">
 	<?php if ( have_posts() ) : ?>
@@ -34,5 +35,5 @@ if ($mt_layout == "left") {
 	<div class="col-md-4 <?php echo sanitize_html_class($mt_float_sidebar); ?> "><?php get_sidebar(); ?></div>
 </div>
 </div>
-
+</div>
 <?php get_footer(); ?>

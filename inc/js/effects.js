@@ -46,6 +46,10 @@ function hasScrolled() {
 jQuery(document).ready(function() {
   'use strict';
 
+  jQuery( '.single-content .entry-content a[href$=".gif"], .single-content .entry-content a[href$=".jpg"], .single-content .entry-content a[href$=".png"]' ).addClass( 'lightbox' );
+
+  jQuery('.mt-slide-1-img, .mt-slide-1-img-left, .mt-slide-1-img-right, .mt-head').addClass("show");
+
   jQuery('.zoom, .lightbox').magnificPopup({
     type:'image',
     gallery:{enabled:true,navigateByImgClick: true,
@@ -234,4 +238,85 @@ jQuery(document).ready(function() {
           }
         }]
     });
+    jQuery('.mt-cool-slider-carousel').slick({
+       arrows: false,
+       rtl: $rtl,
+       slidesToShow: 1,
+       slidesToScroll: 1,
+       initialSlide: 2,
+       lazyLoad: 'ondemand',
+       autoplay: $autoplay,
+       autoplayTimeout:6000,
+       speed:1200,
+       pauseOnFocus: false,
+       pauseOnHover: false,
+       draggable: false,
+    });
+
+    jQuery('.mt-slide-1-img-left').slick({
+      arrows: false,
+      rtl: $rtl,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      lazyLoad: 'ondemand',
+      autoplay: $autoplay,
+      autoplayTimeout:6000,
+      speed:1200,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      draggable: false,
+    });
+    jQuery('.mt-slide-1-img-right').slick({
+      arrows: false,
+      rtl: $rtl,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 3,
+      lazyLoad: 'ondemand',
+      autoplay: $autoplay,
+      autoplayTimeout:6000,
+      speed:1200,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      draggable: false,
+    });
+
+    jQuery('.mt-cool-slider-big-title').slick({
+      arrows: false,
+      rtl: $rtl,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 2,
+      lazyLoad: 'ondemand',
+      autoplay: $autoplay,
+      autoplayTimeout:6000,
+      speed:1200,
+      fade: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      draggable: false,
+    });
+    jQuery('.mt-cool-slider-small-title').slick({
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 3,
+      lazyLoad: 'ondemand',
+      autoplay: $autoplay,
+      autoplayTimeout:12000,
+      speed:1500,
+      vertical: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      draggable: false,
+    });
+    jQuery('.mt-slide-1-img-left').click(function() {
+    jQuery('.mt-slide-1-img-left, .mt-slide-1-img-right, .mt-cool-slider-carousel, .mt-cool-slider-big-title, .mt-cool-slider-big-title, .mt-cool-slider-small-title').slick('slickNext');
+    });
+
+    jQuery('.mt-slide-1-img-right').click(function() {
+    jQuery('.mt-slide-1-img-left, .mt-slide-1-img-right, .mt-cool-slider-carousel, .mt-cool-slider-big-title, .mt-cool-slider-big-title, .mt-cool-slider-small-title').slick('slickPrev');
+    });
+    jQuery('.mt-slide-1-img, .mt-slide-1-img-left, .mt-slide-1-img-right, .mt-head').addClass("show");
 });
