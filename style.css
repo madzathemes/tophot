@@ -569,6 +569,8 @@ iframe {
     margin-top: 10px;
 }
 .aligncenter {
+  clear: both;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
